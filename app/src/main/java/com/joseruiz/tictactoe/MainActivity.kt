@@ -28,12 +28,14 @@ class MainActivity : ComponentActivity() {
                         InicioScreen(navController = navController)
                     }
                     composable("JuegoActivity/{jugador1}/{jugador2}/{size}") { backStackEntry ->
+                        // Se obtienen los paramtros de la ruta
                         val jugador1 = backStackEntry.arguments?.getString("jugador1") ?: ""
                         val jugador2 = backStackEntry.arguments?.getString("jugador2") ?: ""
                         val size = backStackEntry.arguments?.getString("size")?.toInt() ?: 3
                         JuegoScreen(jugador1, jugador2, size, navController)
                     }
                     composable("FinalActivity/{ganador}") { backStackEntry ->
+                        // Se obtiene el parametro de la ruta
                         val ganador = backStackEntry.arguments?.getString("ganador") ?: ""
                         FinalScreen(ganador, navController)
                     }

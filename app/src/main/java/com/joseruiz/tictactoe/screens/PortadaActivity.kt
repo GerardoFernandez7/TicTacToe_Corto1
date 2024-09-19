@@ -24,6 +24,7 @@ fun PortadaScreen(navController: NavController) {
         Text(text = "Tic Tac Toe", style = MaterialTheme.typography.bodyLarge)
         Spacer(modifier = Modifier.height(32.dp))
         Button(onClick = {
+            // Se redirige al activity de Inicio
             navController.navigate("InicioActivity") }
         ) {
             Text("Start")
